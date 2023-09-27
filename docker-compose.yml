@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:latest
     environment:
-      POSTGRES_DB: "rschir-pr5"
+      POSTGRES_DB: "bd"
       POSTGRES_USER: "admin"
       POSTGRES_PASSWORD: "admin"
     ports:
