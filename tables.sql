@@ -42,8 +42,7 @@ CREATE TABLE employees (
     firstname  VARCHAR(255) NOT NULL,
     middlename VARCHAR(255),
     lastname   VARCHAR(255) NOT NULL,
-    team_id    INTEGER REFERENCES teams (id),
-    salary     INTEGER      NOT NULL
+    team_id    INTEGER REFERENCES teams (id)
 );
 
 CREATE TABLE specialisations (
@@ -53,7 +52,8 @@ CREATE TABLE specialisations (
 
 CREATE TABLE jobs (
     id    INTEGER PRIMARY KEY,
-    title VARCHAR(255) NOT NULL
+    title VARCHAR(255) NOT NULL,
+    salary INTEGER NOT NULL
 );
 
 CREATE TABLE employees_specialisations (
