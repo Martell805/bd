@@ -1,5 +1,6 @@
-DROP SCHEMA public CASCADE;
-CREATE SCHEMA public;
+drop database sites;
+create database sites;
+USE sites;
 
 CREATE TABLE customers (
     id INTEGER PRIMARY KEY,
