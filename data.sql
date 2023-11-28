@@ -36,6 +36,7 @@ INSERT INTO jobs VALUES (2, 'Старший разработчик', 2000);
 INSERT INTO jobs VALUES (3, 'Разработчик', 1000);
 INSERT INTO jobs VALUES (4, 'Дизайнер', 1000);
 INSERT INTO jobs VALUES (5, 'Девопс', 1500);
+INSERT INTO jobs VALUES (6, 'Аналитик', 1500);
 /*Employees*/
 INSERT INTO employees VALUES (1, 1, 'Лидер', 'Команды', 'Бекэнда', 2);
 INSERT INTO employees VALUES (2, 2, 'Старший', 'Разработчик', 'Бекэнда', 2);
