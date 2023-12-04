@@ -1,6 +1,6 @@
 SELECT firstname FROM employees;
 
-SELECT * FROM employees WHERE team_id = 2;
+SELECT * FROM employees;
 
 SELECT emp.id, job.salary
     FROM employees emp
@@ -9,7 +9,7 @@ SELECT emp.id, job.salary
 
 SELECT * FROM employees WHERE job_id=2
 UNION
-SELECT * FROM employees WHERE job_id=3;
+SELECT * FROM employees WHERE firstname='Просто';
 
 SELECT * FROM jobs
 WHERE EXISTS (SELECT * FROM employees WHERE employees.job_id = jobs.id);
@@ -20,9 +20,13 @@ WHERE NOT EXISTS (SELECT * FROM employees WHERE employees.job_id = jobs.id);
 
 SELECT job_id, COUNT(id) AS count FROM employees GROUP BY job_id;
 
+SELECT SUM(salary) AS sum FROM jobs;
+
+SELECT MIN(salary) AS min, MAX(salary) AS max, AVG(salary) as avg FROM jobs;
+
 SELECT * FROM employees ORDER BY id DESC;
 
-SELECT job.title, COUNT(emp.id) AS count FROM employees AS emp
-    INNER JOIN jobs AS job
-    WHERE emp.job_id = job.id
-    GROUP BY job.id;
+SELECT team.id, COUNT(emp.id) AS count FROM employees AS emp
+    INNER JOIN teams AS team
+    WHERE emp.team_id = team.id
+    GROUP BY team.id;
