@@ -8,6 +8,10 @@ SELECT * FROM employees ORDER BY job_id, team_id;
 
 SELECT * FROM employees WHERE team_id = 2;
 
+SELECT * FROM employees WHERE id < 12 AND id > 4 AND id != 7;
+
+SELECT * FROM employees WHERE id <= 12 AND id >= 4;
+
 SELECT * FROM employees WHERE middlename IS NOT NULL;
 
 SELECT * FROM employees WHERE middlename IS NULL;
